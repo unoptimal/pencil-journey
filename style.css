@@ -1,0 +1,873 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 1280px;
+  color: #3b3b3b;
+  font-size: 24px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  margin: 0;
+  font-weight: 400;
+}
+
+#intro {
+  max-width: 40rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.intro__hed {
+  font-size: 2em;
+  margin: 2rem auto 0.5rem auto;
+}
+
+.intro__dek {
+  color: #8a8a8a;
+}
+
+#intro {
+  margin-bottom: 50px;
+}
+
+
+#outro {
+  height: 640px;
+}
+
+@media (min-width: 840px) {
+  .nav__examples {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+}
+
+/* SCROLLY STUFF */
+
+#scrolly {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* background-color: #f3f3f3; */
+  padding: 1rem;
+}
+
+#scrolly > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+article {
+  position: relative;
+  padding: 0 1rem;
+  max-width: 50%;
+}
+
+.sticky-thing {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 75%;
+  margin: 0;
+  /* background-color: #8a8a8a; */ 
+  z-index: 0;
+  top: 12.5vh;
+  height: 75vh;
+  /* Center everything inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.sticky-thing img{
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.step {
+  margin: 0 auto 2rem auto;
+  /* background-color: #3b3b3b; */
+  color: black;
+  
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step.is-active {
+  /* background-color: goldenrod; */
+  color: #3b3b3b;
+  
+}
+
+.step p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  height: 75vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-step p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  height: 100vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#byline{
+  margin-top: 10px;
+  font-size: 20px;
+}
+#byline #desktop{
+  margin-top: 10px;
+  font-size: 18px;
+}
+#byline #inspired{
+  margin-top: 10px;
+  font-size: 16px;
+}
+#byline a{
+  text-decoration: none;
+  font-weight: 400;
+}
+#byline a:visited{
+  color: gray;
+}
+#byline a:hover{
+  color: #16b7ff;
+}
+
+/* SVG STYLING */
+
+#extended_pencil #tip{
+  animation: tip 4s ease-in-out infinite;
+  }
+@keyframes tip{
+  0%, 100%{
+    transform: translateY(0%)
+  }
+  50%{
+    transform: translateY(-4%)
+  }
+}
+
+#extended_pencil #metal{
+  animation: metal 4s ease-in-out infinite;
+  }
+
+  @keyframes metal{
+    0%, 100%{
+      transform: translateY(0%)
+    }
+    50%{
+      transform: translateY(4%)
+    }
+  }
+  
+
+#extended_pencil #eraser_base, #eraser_round{
+    animation: eraser_down 4s ease-in-out infinite;
+    }
+
+    @keyframes eraser_down{
+      0%, 100%{
+        transform: translateY(0%)
+      }
+      50%{
+        transform: translateY(8%)
+      }
+    }
+  
+  
+#earth{
+  animation: earth 2s infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+@keyframes earth{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-6%);
+  }
+  
+}
+
+#lineage #lin_graphite{
+  animation: lin_graphite 2s forwards ease-in-out;
+  opacity: 0;
+}
+@keyframes lin_graphite{
+  0%{
+    opacity: 0;
+    transform: translateY(40%) translateX(40%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%);
+  }
+}
+
+#lineage #lin_zinc{
+  animation: lin_zinc 2s forwards ease-in-out;
+  opacity: 0;
+  animation-delay:0.5s;
+}
+@keyframes lin_zinc{
+  0%{
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+#lineage #lin_log{
+  animation: lin_log 2s forwards ease-in-out;
+  opacity: 0;
+  animation-delay:0.37s;
+}
+@keyframes lin_log{
+  0%{
+    opacity: 0;
+    transform: translateY(40%) translateX(-40%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%);
+  }
+}
+
+#lineage #lin_brass{
+  animation: lin_brass 2s forwards ease-in-out;
+  opacity: 0;
+  animation-delay:0.9s;
+}
+@keyframes lin_brass{
+  0%{
+    opacity: 0;
+    transform: translateY(100%) translateX(-20%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%);
+  }
+}
+
+#lineage #lin_sulfide{
+  animation: lin_sulfide 2s forwards ease-in-out;
+  opacity: 0;
+  animation-delay:0.6s;
+}
+@keyframes lin_sulfide{
+  0%{
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+#lineage #lin_pumice{
+  animation: lin_pumice 2s forwards ease-in-out;
+  opacity: 0;
+  animation-delay:0.75s;
+}
+@keyframes lin_pumice{
+  0%{
+    opacity: 0;
+    transform: translateY(90%) translateX(10%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%) translateX(0%);
+  }
+}
+
+#trees #cal_trunks, #oregon_trunks, #cal_leaves, #oregon_leaves{
+  animation: fadeIn 2s;
+  animation-fill-mode: forwards;
+  
+}
+@keyframes fadeIn{
+  from{
+    opacity: 1;
+    transform: translateY(7%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#three #saw, #rope{
+  animation: three 4s infinite ease-in-out;
+}
+@keyframes three{
+  0%, 100% { 
+    transform: translateY(0);
+  }
+  50%  {
+    transform: translateY(5%);
+    }
+}
+
+#three #truck{
+  animation: truck 4s infinite ease-in-out;
+}
+@keyframes truck{
+  0%, 100% { 
+    transform: translateY(0%);
+  }
+  50%  {
+    
+    transform: translateY(-2.5%);
+    }
+}
+
+#mill{
+  animation: mill 2s ease-in;
+}
+@keyframes mill{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+#kiln #kiln, #fire{
+  animation: kiln 1.25s forwards ease-in-out;
+}
+@keyframes kiln{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+#kiln #lightbulb{
+  animation: lightbulb 1.25s forwards ease-in-out;
+}
+@keyframes lightbulb{
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+
+#factory #factory{
+  animation: factory 1s forwards ease-in-out;
+}
+@keyframes factory{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+#factory #_4mil{
+  animation: mil 1.5s forwards ease-in-out;
+}
+@keyframes mil{
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+
+#graphite #_1, #_2, #star_3{
+  animation: fadingIn 1s infinite;
+  opacity: 0;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-delay: calc(var(--order) * 200ms);
+}
+
+@keyframes fadingIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+#furnace #Layer_15, #Layer_16, #Layer_18{
+  animation: fadeUp 2s infinite;
+  animation-fill-mode: forwards;
+  opacity:0;
+  animation-delay: calc(var(--order) * 200ms);
+}
+@keyframes fadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(-60%);
+  }
+}
+
+#labeling #pencil{
+  animation: label_pencil 1s forwards ease-in-out;
+}
+@keyframes label_pencil{
+  to{
+    transform: translateY(0) scale(1.5);
+  }
+}
+
+#labeling #label{
+  animation: label 1s forwards ease-in-out;
+  opacity: 0;
+  
+}
+@keyframes label{
+  from{
+    opacity: 0.2;
+    transform: translateY(-15%) translateX(5%) scale(.75);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(-15%) translateX(8%) scale(1);
+  }
+}
+
+
+#resins #resin1{
+  animation: resin 1.5s forwards ease-in-out;
+  opacity: 0;
+  animation-delay: .25s;
+}
+
+#resins #resin2{
+  animation: resin 1.5s forwards ease-in-out;
+  animation-delay: .5s;
+  opacity: 0;
+}
+
+#resins #resin3{
+  animation: resin3 1.5s forwards ease-in-out;
+  
+}
+@keyframes resin{
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(20%);
+  }
+}
+@keyframes resin3{
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+#resins #carbon{
+  animation: carbon 1s forwards ease-in-out;
+  opacity: 0;
+  animation-delay: 2s;
+}
+@keyframes carbon{
+  0%{
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+#brass #brass_1{
+  animation: brass2 1.5s forwards;
+  opacity:0;
+}
+@keyframes brass1{
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#brass #brass_2{
+  animation: brass2 1.5s forwards ease-in-out;
+  opacity:0;
+  animation-delay:0.25s;
+}
+@keyframes brass2{
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#brass #brass_3{
+  animation: brass3 1.5s forwards ease-in-out;
+  opacity:0;
+  animation-delay:.8s;
+}
+@keyframes brass3{
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#brass #brass_4{
+  animation: brass4 1.5s forwards ease-in-out;
+  opacity:0;
+  animation-delay:1.3s;
+}
+@keyframes brass4{
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#zoom_eraser{
+  animation: eraserUp 1s forwards, eraserZoom 1s 0.95s forwards;
+}
+
+@keyframes eraserUp{
+  to{
+   transform: translateY(-70%)
+  }
+}
+
+@keyframes eraserZoom{
+  from{
+    transform: translateY(-70%)
+   }
+  to{
+    transform: translateY(-70%) scale(2);
+}
+}
+
+#rubber #factice, #rubber-eraser{
+  animation: comeUp 1s forwards;
+}
+@keyframes comeUp{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+#rubber #X, #checkmark{
+  animation: comeDown 1s forwards;
+  
+}
+@keyframes comeDown{
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+#morerubber #more-rubber-eraser{
+  animation: zoomInFade 2.5s forwards ease-in-out;
+}
+@keyframes zoomInFade{
+  from{
+    opacity: 1;
+    transform: scale(1);
+    
+    }
+  to{
+    opacity: 0;
+    transform: scale(2) translateX(-22.5%) translateY(-22.5%);
+    
+  }
+}
+
+#morerubber #pumice{
+  animation: pumice 2s forwards;
+  opacity: 0;
+  animation-delay: 1.9s;
+}
+@keyframes pumice{
+  from{
+    opacity: 0;
+    transform: translate(25%) translateY(25%);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0) translateY(0);
+  }
+}
+
+#morerubber #sulfide{
+  animation: sulfide 2s forwards;
+  opacity: 0;
+  animation-delay: 1.9s;
+}
+@keyframes sulfide{
+  from{
+    opacity: 0;
+    transform: translate(-25%) translateY(25%);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0) translateY(0);
+  }
+}
+
+#morerubber #italy{
+  animation: italy 2s forwards;
+  opacity: 0;
+  animation-delay: 1.9s;
+}
+@keyframes italy{
+  from{
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#what{
+  scale: 0.75;
+  animation: what 2s forwards;
+}
+@keyframes what{
+  from{
+    opacity:0;
+    transform: translateY(20%);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+#miracle #small_tree{
+  animation: small_tree 5s forwards ease-in-out;
+  opacity: 0;
+}
+@keyframes small_tree{
+  0%{
+    opacity: 0;
+    transform: translateY(40%) translateX(40%);
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-30%) translateX(-30%);
+  }
+}
+
+#miracle #small_zinc{
+  animation: small_zinc 5s forwards ease-in-out;
+  opacity: 0;
+  animation-delay: 0.25s;
+}
+@keyframes small_zinc{
+  0%{
+    opacity: 0;
+    transform: translateY(40%) translateX(-40%);
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-30%) translateX(40%);
+  }
+}
+
+#miracle #small_copper{
+  animation: small_copper 5s forwards ease-in-out;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+@keyframes small_copper{
+  0%{
+    opacity: 0;
+    transform: translateY(-40%) translateX(40%);
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(30%) translateX(-40%);
+  }
+}
+
+#miracle #small_graphite{
+  animation: small_graphite 5s forwards ease-in-out;
+  opacity: 0;
+  animation-delay: 0.75s;
+}
+@keyframes small_graphite{
+  0%{
+    opacity: 0;
+    transform: translateY(-40%) translateX(-40%);
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(30%) translateX(40%);
+  }
+}
+
+#greatest_miracle #guy1, #guy2, #guy3, #guy4, #guy5, #guy6, #guy7, #guy8, #guy9, #guy10, #guy11, #guy12, #guy13, #guy14, #guy15, #guy16, #guy17, #guy18, #guy19, #guy20, #guy21, #guy22, #guy23, #guy23, #guy24, #guy25, #guy26, #guy27, #guy28, #guy29, #guy30, #guy31{
+  animation: greatest_miracle .75s forwards;
+  opacity: 0;
+  animation-delay: calc(var(--order) * 100ms);
+}
+@keyframes greatest_miracle{
+  from{
+    opacity: 0;
+    }
+  to{
+    opacity: 1;
+    }
+}
+
+#network #line1, #line2, #line3, #line4, #line5, #line6, #line7, #line8, #line9{
+  animation: network 4s forwards;
+  opacity: 0;
+  animation-delay: calc(var(--order) * 100ms);
+}
+@keyframes network{
+  from{
+    opacity: 0;
+    }
+  to{
+    opacity: 1;
+    }
+}
+
+#superintelligent #brain{
+  animation: brain 3s forwards ease-in-out;
+  opacity: 0;
+  animation-delay: 4s;
+}
+@keyframes brain{
+  from{
+    opacity: 0;
+    transform: translateX(20%) translateY(20%) scale(0.5);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#superintelligent #lines{
+  animation: lines 1s forwards
+}
+@keyframes lines{
+  to{
+    opacity: 0;
+  }
+}
+
+#superintelligent #aguy1, #aguy2, #aguy3, #aguy4, #aguy5, #aguy6, #aguy7, #aguy7, #aguy8, #aguy9, #aguy10, #aguy11, #aguy12, #aguy13, #aguy14, #aguy15, #aguy16, #aguy17, #aguy18, #aguy19, #aguy20, #aguy21, #aguy22, #aguy23, #aguy24, #aguy25, #aguy26, #aguy27, #aguy28, #aguy29, #aguy30, #aguy31{
+  animation: superintelligent 2s forwards;
+  animation-delay: calc(var(--order) * 100ms);
+}
+@keyframes superintelligent{
+  to{
+    transform: translateX(50%) translateY(50%) scale(0);
+    }
+}
